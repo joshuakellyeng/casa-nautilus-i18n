@@ -1,4 +1,5 @@
 {
-    "layout": "layouts/post.html",
-    "tags": "post"
+	"layout": "layouts/post.html",
+	"tags": "post",
+	"permalink": "blog/{{title}}/index.html"
 }

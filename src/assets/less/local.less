@@ -1,0 +1,714 @@
+/* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#services-285 {
+		/* centers the button */
+		text-align: center;
+		padding: var(--sectionPadding);
+	}
+	#services-285 .cs-container {
+		width: 100%;
+		max-width: 80rem;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* 48px - 64px */
+		gap: clamp(3rem, 6vw, 4rem);
+	}
+	#services-285 .cs-content {
+		/* set text align to left if content needs to be left aligned */
+		text-align: center;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		/* centers content horizontally, set to flex-start to left align */
+		align-items: center;
+	}
+	#services-285 .cs-card-group {
+		width: 100%;
+		margin: 0;
+		/* 36px - 80px top & bottom */
+		/* 24px - 88px right & left */
+		padding: clamp(2.25rem, 6vw, 5rem) clamp(1.5rem, 6.4vw, 5.5rem);
+		background-color: #fff;
+		/* prevents padding and border from affecting height and width */
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		/* 32px - 64px */
+		row-gap: clamp(2rem, 7vw, 4rem);
+		border-radius: 1.5rem;
+	}
+	#services-285 .cs-item {
+		list-style: none;
+		width: 100%;
+		max-width: 31.25rem;
+		/* 32px - 40px top & bottom */
+		/* 28px - 40px left & right */
+		padding: clamp(2rem, 3vw, 2.5rem) clamp(1.75rem, 3vw, 2.5rem);
+		background-color: #fafbfc;
+		box-sizing: border-box;
+		transition: background-color 0.3s, transform 0.3s;
+	}
+	#services-285 .cs-item:hover {
+		background-color: var(--primary);
+		transform: translateY(-0.4375rem);
+	}
+	#services-285 .cs-item:hover .cs-picture:before {
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+	}
+	#services-285 .cs-item:hover .cs-h3,
+	#services-285 .cs-item:hover .cs-item-text {
+		color: #fff;
+	}
+	#services-285 .cs-link {
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		pointer-events: none;
+	}
+	#services-285 .cs-picture {
+		margin: 0;
+		margin-bottom: 1.5rem;
+		/* 68px - 88px */
+		width: clamp(4.25rem, 4vw, 5.5rem);
+		height: clamp(4.25rem, 4vw, 5.5rem);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background-color: var(--primary);
+		position: relative;
+		z-index: 1;
+	}
+	#services-285 .cs-picture:before {
+		/* floating hover box */
+		content: '';
+		width: 130%;
+		height: 130%;
+		background-color: transparent;
+		opacity: 0;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		/* prevents the mouse from interacting with it */
+		pointer-events: none;
+		z-index: 10;
+		transition: width 0.5s, height 0.5s, opacity 0.4s;
+	}
+	#services-285 .cs-icon {
+		/* 45px - 54px */
+		height: clamp(2.8125rem, 3vw, 3.375rem);
+		width: auto;
+	}
+	#services-285 .cs-h3 {
+		font-size: 1.25rem;
+		font-weight: 900;
+		text-align: center;
+		line-height: 1.2em;
+		margin: 0;
+		margin-bottom: 0.75rem;
+		color: var(--headerColor);
+		transition: color 0.3s;
+	}
+	#services-285 .cs-item-text {
+		font-size: 1rem;
+		text-align: center;
+		line-height: 1.5em;
+		margin: 0;
+		color: var(--bodyTextColor);
+		transition: color 0.3s;
+	}
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#services-285 .cs-card-group {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		/* 48px - 64px */
+		row-gap: clamp(3rem, 6vw, 4rem);
+	}
+	#services-285 .cs-item {
+		width: 47%;
+	}
+}
+/* Desktop 1024px */
+@media only screen and (min-width: 64rem) {
+	#services-285 .cs-item {
+		width: 31%;
+	}
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+	body.dark-mode #services-285 .cs-item:hover {
+		background-color: var(--dark);
+	}
+	body.dark-mode #services-285 .cs-picture {
+		background-color: var(--dark);
+	}
+}
+
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#cta-51 {
+		padding: var(--sectionPadding);
+		position: relative;
+	}
+	#cta-51 .cs-container {
+		width: 100%;
+		max-width: 80rem;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* 48px - 64px */
+		gap: clamp(3rem, 6vw, 4rem);
+	}
+	#cta-51 .cs-content {
+		/* set text align to left if content needs to be left aligned */
+		text-align: center;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		/* centers content horizontally, set to flex-start to left align */
+		align-items: center;
+	}
+	#cta-51 .cs-title {
+		color: var(--bodyTextColorWhite);
+	}
+	#cta-51 .cs-text {
+		margin-bottom: 1rem;
+		color: var(--bodyTextColorWhite);
+		opacity: 0.8;
+	}
+	#cta-51 .cs-text:last-of-type {
+		margin-bottom: 2rem;
+	}
+	#cta-51 .cs-picture {
+		height: 100%;
+		width: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	#cta-51 .cs-picture:before {
+		/* black color overlay */
+		content: '';
+		position: absolute;
+		display: block;
+		height: 100%;
+		width: 100%;
+		background: var(--primary);
+		opacity: 0.8;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	#cta-51 .cs-picture img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	#cta-51 .cs-topper {
+		color: var(--bodyTextColorWhite);
+	}
+}
+// DARK MODE
+@media only screen and (min-width: 0rem) {
+	body.dark-mode #cta-51 .cs-picture:before {
+		background: var(--dark);
+		opacity: 0.85;
+	}
+}
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#services-1355 {
+		padding: var(--sectionPadding);
+		position: relative;
+		z-index: 10;
+
+		.cs-container {
+			width: 100%;
+			max-width: (1280/16rem);
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: clamp(3rem, 6vw, 4rem);
+		}
+
+		.cs-content {
+			/* set text align to left if content needs to be left aligned */
+			text-align: center;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			/* centers content horizontally, set to flex-start to left align */
+			align-items: center;
+		}
+
+		.cs-topper {
+			color: var(--primary);
+		}
+
+		.cs-title {
+			max-width: 25ch;
+			margin: 0;
+		}
+
+		.cs-card-group {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			/* 16px - 20px */
+			gap: clamp(1rem, 2vw, 1.25rem);
+		}
+
+		.cs-item {
+			text-align: center;
+			list-style: none;
+			width: 100%;
+			height: (305/16rem);
+			margin: 0;
+			padding: 0;
+			background-color: #000;
+			border-radius: (24/16rem);
+			/* clips background image corners */
+			overflow: hidden;
+			box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+			/* prevents padding and border from affecting height and width */
+			box-sizing: border-box;
+			grid-column: span 12;
+			grid-row: span 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-end;
+			position: relative;
+			z-index: 1;
+
+			&:hover {
+				.cs-background {
+					&:before {
+						background-color: var(--primary);
+						opacity: 0.84;
+					}
+
+					img {
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+
+		.cs-link {
+			text-decoration: none;
+			width: 100%;
+			height: 100%;
+			/* padding goes on the link, not the cs-item as is normal. We do this because we want the whole card to be hoverable. So we add the padding to the link tag to create the space inside the card. By adding the space inside the cs-link tag we can make the whole card hoverable since the padding is now contributing to the height and widht of the link */
+			padding: (24/16rem);
+			/* prevents padding from affecting height and width */
+			box-sizing: border-box;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.cs-h3 {
+			/* 20px - 25px */
+			font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+			line-height: 1.2em;
+			font-weight: bold;
+			text-align: inherit;
+			margin: 0;
+			color: var(--bodyTextColorWhite);
+			transition: color 0.3s;
+		}
+
+		.cs-span {
+			/* forces the h3 to alwasy be two lines */
+			display: block;
+		}
+
+		.cs-background {
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+
+			&:before {
+				/* background color overlay */
+				content: '';
+				position: absolute;
+				display: block;
+				height: 100%;
+				width: 100%;
+				background-color: #000;
+				opacity: 0.4;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				transition: background-color 0.3s, opacity 0.3s;
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				/* Makes img tag act as a background image */
+				object-fit: cover;
+				transition: transform 0.6s;
+			}
+		}
+	}
+}
+
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+	#services-1355 {
+		.cs-content {
+			text-align: left;
+			align-items: flex-start;
+		}
+
+		.cs-item {
+			grid-column: span 4;
+		}
+	}
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+	body.dark-mode {
+		#services-1355 {
+			.cs-topper {
+				color: var(--primaryLight);
+			}
+
+			.cs-title {
+				color: var(--bodyTextColorWhite);
+			}
+
+			.cs-item {
+				&:hover {
+					.cs-background {
+						&:before {
+							background-color: var(--dark);
+							opacity: 0.84;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#reviews-1672 {
+		padding: var(--sectionPadding);
+	}
+	#reviews-1672 .cs-container {
+		width: 100%;
+		max-width: 80rem;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* 40px - 64px */
+		gap: clamp(2.5rem, 4.5vw, 4rem);
+	}
+	#reviews-1672 .cs-content {
+		text-align: left;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	#reviews-1672 .cs-title {
+		margin: 0rem;
+	}
+	#reviews-1672 .cs-card-group {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		/* 16px - 20px */
+		gap: clamp(1rem, 2.5vw, 1.25rem);
+	}
+	#reviews-1672 .cs-item {
+		list-style: none;
+		width: 100%;
+		/* 20px - 40px top & bottom */
+		/* 20px - 40px left & right */
+		padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
+		background-color: #f7f7f7;
+		/* prevents padding from adding to height and width */
+		box-sizing: border-box;
+		display: flex;
+		grid-column: span 12;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		position: relative;
+		/* 24px - 48px */
+		gap: clamp(1.5rem, 4vw, 3rem);
+	}
+	#reviews-1672 .cs-flex-group {
+		/* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
+		margin-top: auto;
+		display: flex;
+		align-items: flex-start;
+		gap: 0.75rem;
+	}
+	#reviews-1672 .cs-profile {
+		width: 3.25rem;
+		height: auto;
+		border-radius: 50%;
+		position: relative;
+		display: block;
+	}
+	#reviews-1672 .cs-profile img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		/* makes the image behave like a background image */
+		object-fit: cover;
+	}
+	#reviews-1672 .cs-name {
+		/* 20px - 25px */
+		font-size: 1.25rem;
+		line-height: 1.2em;
+		font-weight: 700;
+		margin: 0;
+		/* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+		margin-top: auto;
+		color: var(--headerColor);
+		display: block;
+	}
+	#reviews-1672 .cs-job {
+		/* 14px - 16px */
+		font-size: 1rem;
+		line-height: 1.5em;
+		font-weight: 400;
+		margin: 0;
+		color: var(--bodyTextColor);
+		display: block;
+	}
+	#reviews-1672 .wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	#reviews-1672 .cs-item-stars {
+		width: 6.75rem;
+		height: auto;
+	}
+	#reviews-1672 .cs-review {
+		/* 14px - 16px */
+		font-size: clamp(0.875rem, 1.6vw, 1.25rem);
+		line-height: 1.5em;
+		margin: 0;
+		color: var(--bodyTextColor);
+		z-index: 1;
+	}
+	#reviews-1672 .cs-quote {
+		width: 5.375rem;
+		height: auto;
+		position: absolute;
+		right: 0rem;
+		bottom: 0rem;
+		z-index: 0;
+	}
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#reviews-1672 .cs-item {
+		grid-column: span 4;
+	}
+}
+
+/*-- -------------------------- -->
+<---           Final CTA        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#cta-488 {
+		padding: 0 (16/16rem);
+		position: relative;
+
+		.cs-container {
+			width: 100%;
+			max-width: (1280/16rem);
+			margin: auto;
+			display: flex;
+			justify-content: flex-start;
+			align-items: stretch;
+		}
+
+		.cs-content {
+			/* 252px - 284px, changes clamp at tablet */
+			width: clamp(15.75rem, 38vw, 17.75rem);
+			/* 20px - 88px left & right */
+			padding: 0 clamp(1.25rem, 6.5vw, 5.5rem);
+			/* 232px - 335px */
+			padding-top: clamp(14.5rem, 26.7vw, 20.9375rem);
+			/* 36px - 72px */
+			padding-bottom: clamp(2.25rem, 5vw, 4.5rem);
+			/* prevents padding and border from affecting height and width */
+			box-sizing: border-box;
+			background: var(--primary);
+			opacity: 0.85;
+		}
+
+		.cs-topper {
+			/* 16px - 20px */
+			font-size: clamp(1rem, 2vw, 1.25rem);
+			line-height: 1.2em;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			margin-bottom: (16/16rem);
+			color: var(--bodyTextColorWhite);
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: (20/16rem);
+			position: relative;
+		}
+
+		.cs-title {
+			/* 20px - 25px */
+			font-size: clamp(1.25rem, 3vw, 1.5625rem);
+			line-height: 1.2em;
+			font-weight: 700;
+			width: 100%;
+			/* 20 characters wide including space */
+			max-width: 20ch;
+			margin: 0 0 (20/16rem);
+			color: var(--bodyTextColorWhite);
+		}
+
+		.cs-link {
+			/* 16px - 20px */
+			font-size: clamp(1rem, 1.5vw, 1.25rem);
+			line-height: 1.2em;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			margin: 0;
+			color: var(--secondary);
+			display: inline-block;
+			position: relative;
+
+			&:hover {
+				&:before {
+					width: 100%;
+				}
+			}
+
+			&:before {
+				content: '';
+				width: 0%;
+				height: (3/16rem);
+				background: currentColor;
+				opacity: 1;
+				position: absolute;
+				display: block;
+				bottom: (-3/16rem);
+				left: 0;
+				transition: width 0.3s;
+			}
+		}
+
+		.cs-background {
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				/* Makes img tag act as a background image */
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#cta-488 {
+		.cs-container {
+			justify-content: flex-end;
+		}
+
+		.cs-content {
+			/* 284px - 522px */
+			width: clamp(17.75rem, 40vw, 32.625rem);
+			/* 60px - 108px */
+			margin-right: clamp(3.75rem, 8vw, 6.75rem);
+		}
+	}
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+	body.dark-mode #cta-488 .cs-content {
+		background: var(--dark);
+		opacity: 0.85;
+	}
+}

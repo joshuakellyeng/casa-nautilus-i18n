@@ -1,55 +1,434 @@
 <!-- ============================================ -->
-<!--                  Footer                      -->
+<!--                   Footer                     -->
 <!-- ============================================ -->
 
-<section id="footer-1390">
-    <div class="cs-container">
-        <div class="cs-top">
-            <a aria-label="go back to home" class="cs-logo" href="">
-                <img class="cs-logo-img" loading="lazy" decoding="async" src="https://codestitch.app/frontend/images/logo-white.svg" alt="logo" width="209" height="40">
-            </a>
-            <ul class="cs-ul">
-                {% set navPages = collections.all | eleventyNavigation %}
-                {% for entry in navPages %}
-                    <li class="cs-li">
-                        <a href="{{ entry.link }}" class="cs-link">{{ entry.key }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="cs-bottom">
-            <!--Social-->
-            <ul class="cs-social">
-                <li class="cs-social-li">
-                    <a href="{{ client.social.facebook }}" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
-                    </a>
-                </li>
-                <li class="cs-social-li">
-                    <a href="{{ client.social.twitter }}" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
-                    </a>
-                </li>
-                <li class="cs-social-li">
-                    <a href="{{ client.social.instagram }}" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
-                    </a>
-                </li>
-                <li class="cs-social-li">
-                    <a href="{{ client.social.youtube }}" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
-                    </a>
-                </li>
-            </ul>
-            <span class="cs-copyright">
-                © Copyright 2023 -
-                <a href="" class="cs-copyright-link">CodeStitch</a>
-            </span>
-            <div class="cs-flex">
-                <a href="" class="cs-copyright-link">Privacy Policy</a>
-                <span class="cs-separater">|</span>
-                <a href="" class="cs-copyright-link">Terms of Use</a>
-            </div>
-        </div>
-    </div>
-</section>
+<footer id="footer">
+	<div class="container">
+		<div class="left-section">
+			<a class="logo" href="/"
+				><img
+					loading="lazy"
+					decoding="async"
+					src="/assets/svgs/casa-nautilus-symbol-combo.svg"
+					alt="logo"
+					width="264"
+					height="78"
+			/></a>
+		</div>
+		<div class="right-section">
+			<div class="lists">
+				<ul>
+					<li>
+						<h2>Sitemap</h2>
+					</li>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/about">About Us</a>
+					</li>
+					<li>
+						<a href="/blog">Blog</a>
+					</li>
+					<li>
+						<a href="/gallery">Gallery</a>
+					</li>
+					<li>
+						<a href="/faqs">FAQs</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Help</h2>
+					</li>
+					<li>
+						<a onclick="openModal('modal-2')">Privacy Policy</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Contact</h2>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/JJjT9sNTxz3eGFC86">
+							{{client.address.lineOne}}<br />
+							{{client.address.lineTwo}}<br />
+							{{client.address.city}} {{client.address.state}}
+							{{client.address.zip}}
+						</a>
+					</li>
+					<li>
+						<a href="tel:{{client.phoneForTel}}">
+							T: {{client.phoneFormatted}}
+						</a>
+					</li>
+					<li>
+						<a href="mailto:{{client.email}}">{{client.email}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="credit">
+		<span>Designed and Hand Coded by</span>
+		<a href="/" target="_blank" rel="noopener"> Holistic Careers LLC </a>
+		<span class="copyright"> Copyright {% year %} - Present</span>
+	</div>
+
+	<!-- PRIVACY POLICY MODAL -->
+	<div id="modal-2" class="jw-modal">
+		<div class="jw-modal-body">
+			<div class="cs-container">
+				<h1>Privacy Policy</h1>
+
+				<p>This website uses cookies.</p>
+
+				<p>
+					Cookies are files sent to a browser through a web server to record the
+					User's activities on a website or services of the website
+					(hereinafter, the services). Cookies are used to facilitate quicker
+					access to selected services and to personalize the services offered by
+					the website, based on the user's usual choices and preferences when
+					using the services.
+				</p>
+
+				<p>
+					Cookies are associated with an anonymous user and their computer and
+					do not collect personal data. The user can configure their browser to
+					not allow the installation of cookies used by the website, although
+					rejecting them will not prevent the user from accessing the services.
+					However, not allowing the installation of cookies may decrease the
+					speed and quality of the website's operation.
+				</p>
+
+				<h2>Use of cookies by the website:</h2>
+
+				<p>
+					In compliance with Law 34/2002, of July 11, on Information Society
+					Services and Electronic Commerce, we inform you that this website,
+					like most sites on the Internet, uses Cookies to improve and optimize
+					the user experience. Below, you will find detailed information on what
+					Cookies are, what types this website uses, how to change your cookie
+					settings, and what happens if you disable Cookies.
+				</p>
+
+				<h2>What are Cookies?</h2>
+
+				<p>
+					A cookie is a small file downloaded to the user's computer to store
+					data, which can be updated and retrieved by the entity responsible for
+					its installation.
+				</p>
+
+				<h2>Cookies can be:</h2>
+				<ul>
+					<li>
+						Technical Cookies: These allow the user to navigate through a
+						website, platform, or application and use the different options or
+						services available, such as controlling traffic and data
+						communication, identifying sessions, accessing restricted access
+						parts, remembering elements that make up an order, completing the
+						purchase process of an order, submitting a registration or
+						participation request for an event, using security elements during
+						navigation, storing content for video or sound broadcasting, or
+						sharing content through social networks.
+					</li>
+
+					<li>
+						Personalization Cookies: These allow the user to access the service
+						with some predefined general characteristics based on criteria on
+						the user's terminal, such as language, type of browser used to
+						access the service, regional settings from which the service is
+						accessed, etc.
+					</li>
+
+					<li>
+						Analytical Cookies: These, either processed by us or by third
+						parties, allow us to quantify the number of users and perform
+						statistical measurement and analysis of the use users make of the
+						offered service. To do this, their navigation on our website is
+						analyzed in order to improve the offer of products or services we
+						provide.
+					</li>
+
+					<li>
+						Third-party Cookies: D. L. GOINS's website may use third-party
+						services that, on behalf of D. L. GOINS, collect information for
+						statistical purposes about the user's use of the Site and for the
+						provision of other services related to the Website's activity and
+						other internet services.
+					</li>
+
+					<li>
+						Session Cookies: These are cookies designed to collect and store
+						data while the user accesses a website. These cookies are not stored
+						on the user's computer when the session expires or the user closes
+						the browser.
+					</li>
+
+					<li>
+						Persistent Cookies: These are cookies in which data remains stored
+						on the user's computer and can be accessed and processed when the
+						user leaves the website and reconnects to it. These cookies can be
+						deleted at any time by the user.
+					</li>
+				</ul>
+
+				<p>
+					In particular, this website uses Google Analytics, a web analytics
+					service provided by Google Inc. With headquarters in the United States
+					at 1600 Amphitheatre Parkway, Mountain View, California 94043. For the
+					provision of these services, they use cookies that collect
+					information, including the user's IP, which will be transmitted,
+					processed, and stored by Google as set forth on the Google.com
+					website. This may include the transmission of such information to
+					third parties for legal reasons or when such third parties process the
+					information on behalf of Google.
+				</p>
+
+				<p>
+					The website collects user information by installing the following
+					cookies on the visitor's hard drive. This information does not in any
+					way identify or can be used to personally identify the user, meaning
+					they are completely anonymous.
+				</p>
+
+				<h3>Types, purpose, and operation of cookies used on the website.</h3>
+
+				<h3>How to disable cookies in major browsers.</h3>
+
+				<p>
+					They can be blocked or disabled using the configuration tools of your
+					browser. The browser allows you to reject the installation of all
+					cookies or choose to reject only some of them.
+				</p>
+
+				<p>
+					We provide links to the tools of the main browsers where you can learn
+					how to disable cookies.
+				</p>
+
+				<a
+					href="https://support.google.com/chrome/answer/95647?hl=en&amp;hlrm=en"
+					>Google Chrome Support</a
+				>
+
+				<a
+					href="http://support.mozilla.org/en/kb/cookies-informacion-que-los-sitios-web-guardan-en-?redirectlocale=en-US&amp;redirectslug=Cookies"
+				>
+					Mozilla Firefox Support
+				</a>
+
+				<a
+					href="http://support.apple.com/kb/PH5042?viewlocale=en_UShttp://support.apple.com/kb/HT1677?viewlocale=en_US"
+				>
+					Apple Safari
+				</a>
+
+				<p>Internet Explorer</p>
+
+				<a href="http://support.microsoft.com/kb/196955/en">Version 5</a>
+
+				<p></p>
+
+				<a href="http://support.microsoft.com/kb/283185/en">Version 6</a>
+
+				<a
+					href="http://windows.microsoft.com/en-US/windows-vista/Block-or-allow-cookies"
+				>
+					Versions 7 and 8
+				</a>
+
+				<p></p>
+
+				<a
+					href="http://windows.microsoft.com/en-US/windows7/How-to-manage-cookies-in-Internet-Explorer-9"
+				>
+					Version 9
+				</a>
+
+				<p></p>
+
+				<a
+					href="http://windows.microsoft.com/en-xl/internet-explorer/delete-manage-cookies"
+				>
+					Version 10 and later
+				</a>
+
+				<h3>What happens if cookies are disabled</h3>
+
+				<p>
+					If you reject cookies, you can still use our website, but some
+					services and/or links may stop working, and we won't be able to obtain
+					valuable information from you to offer content tailored to your
+					interests and to allow you to access information of interest more
+					easily and quickly.
+				</p>
+
+				<h3>Changes to the cookie policy</h3>
+
+				<p>
+					This website may modify this cookie policy either by incorporating new
+					cookies due to the need for new content that may be offered, or due to
+					legislative or regulatory requirements that make it necessary to
+					change it. Therefore, Users are advised to visit it before starting
+					navigation on the website and each time they visit it again.
+				</p>
+
+				<h3>LEGAL NOTICE</h3>
+
+				<p>
+					In compliance with the provisions of article 10 of Law 34/2002, of
+					July 11, on Information Society Services and Electronic Commerce
+					(hereinafter, LSSI-CE), recipients of this service are informed that
+					D. L. GOINS, with registered office at Calle Barrocal 5, C&aacute;diz,
+					11500; is responsible for the website.
+				</p>
+
+				<p>NIE account number Y-2815757-L</p>
+
+				<p>Their phone number is 603 168 882</p>
+
+				<p>
+					The contact email address is
+					<a href="mailto:SpanishGalleonLodge@gmail.com"
+						>SpanishGalleonLodge@gmail.com</a
+					>
+					for questions related to access or, in general, to the protection of
+					personal data and privacy; you can use this email address.
+				</p>
+
+				<h3>PRIVACY POLICY</h3>
+
+				<p>
+					D. L. GOINS is aware of the importance of the privacy of personal data
+					treatments and, therefore, has implemented a data treatment policy
+					aimed at providing maximum security in their use and collection,
+					guaranteeing compliance with current regulations in the matter and
+					configuring said policy as one of the basic pillars in the entity's
+					lines of action.
+				</p>
+
+				<p>
+					D. L. GOINS informs users of the website
+					<a href="www.casanautiluscadiz.com">www.casanautiluscadiz.com</a>
+					that, respecting current legislation on the protection of personal
+					data, user privacy, and the confidentiality of personal data, in
+					accordance with the provisions of Organic Law 3/2018, on the
+					Protection of Personal Data and guarantee of digital rights, and the
+					General Data Protection Regulation of the European Union (GDPR)
+					2016/679 of the European Parliament and of the Council of April 27, we
+					have adopted the necessary technical and organizational measures to
+					prevent loss, misuse, alteration, unauthorized access, and theft of
+					the personal data provided, taking into account the state of
+					technology, the nature of the data, and the risks to which they are
+					exposed.
+				</p>
+
+				<p>
+					PURPOSE OF PROCESSING.- Specifically, D. L. GOINS informs users of the
+					website
+					<a href="www.casanautiluscadiz.com">www.casanautiluscadiz.com</a>
+					that their personal data may only be obtained for processing when they
+					are adequate, relevant, and not excessive in relation to the scope and
+					specific, explicit, and legitimate purposes for which they have been
+					obtained. When personal data is collected through
+					<a href="www.casanautiluscadiz.com">www.casanautiluscadiz.com</a>, the
+					user will be informed beforehand, clearly and unequivocally, of the
+					uses and purposes intended for such data, as well as the rights and
+					powers that protect the interested party, requesting express consent
+					for these purposes, enabling a box that must be affirmatively checked.
+					In general, the purpose of processing your data is to be able to
+					attend to communications or requests that come to us through the
+					website and to manage possible reservations of our facilities to
+					provide the required service.
+				</p>
+
+				<h3>DATA RETENTION.</h3>
+
+				<p>
+					Your data will be deleted when they are no longer necessary or
+					relevant for the purpose for which they were obtained and we have
+					informed you, or when the user requests it by withdrawing their
+					consent.
+				</p>
+
+				<p>
+					LEGITIMACY FOR DATA PROCESSING.- The legitimacy basis will be the
+					consent of the interested party for the processing of the data and
+					agreements based on some type of contract, whether verbal or written.
+				</p>
+
+				<h3>RECIPIENTS OF THE DATA.</h3>
+
+				<p>
+					The recipients of your data will be those directly related to the
+					purpose for which we have collected your data.
+				</p>
+
+				<p>
+					It may be that on this website we implement some link to our social
+					media accounts (Facebook, Instagram, Twitter, etc.); with this option,
+					we are only providing you with a link, through a Link, so that you can
+					interact more easily, your data, tastes, or preferences will never be
+					transferred.
+				</p>
+
+				<p>
+					Under no circumstances will D. L. GOINS assume responsibility for the
+					content of any link belonging to a third-party website, nor will it
+					guarantee the constitutionality of any material or information
+					contained in any of these hyperlinks or other websites.
+				</p>
+
+				<p>
+					In case you use the links, please access the privacy policy and legal
+					notice of the visited page.
+				</p>
+
+				<p>
+					The user will be solely responsible for filling out forms with false,
+					inaccurate, incomplete, or outdated data.
+				</p>
+
+				<h3>USER RIGHTS</h3>
+
+				<p>
+					We inform you that you have the right to request access,
+					rectification, deletion, limitation of processing, opposition, or the
+					right to data portability of your personal data through an email to
+					SpanishGalleonLodge@gmail.com or by submitting a written request to
+					the aforementioned address accompanied by ID, Passport, or a reliable
+					document of identity.
+				</p>
+
+				<p>
+					The exercise of some of these rights will not affect the legality of
+					the processing carried out prior to its exercise.
+				</p>
+
+				<p>
+					You have the right to file a complaint with the Spanish Data
+					Protection Agency ([www.agpd.es](http://www.agpd.es/)) if you believe
+					that your rights regarding the protection of your personal data may
+					have been violated, as well as to request information and protection
+					from said organization about the exercise of your rights.
+				</p>
+
+				<h3>INTELLECTUAL AND INDUSTRIAL PROPERTY</h3>
+
+				<p>
+					The intellectual property rights of the content of the web pages,
+					their graphic design, and codes are owned by D. L. GOINS, and,
+					therefore, their reproduction, distribution, public communication, and
+					transformation are prohibited, except for personal and private use.
+					Likewise, all trade names, trademarks, or other distinguishing signs
+					of any kind contained on the web pages of D. L. GOINS are protected by
+					law.
+				</p>
+				<button class="cs-button-solid" onclick="closeModal()">Close</button>
+			</div>
+		</div>
+	</div>
+</footer>

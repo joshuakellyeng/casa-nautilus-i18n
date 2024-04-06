@@ -1,12 +1,14 @@
 ---
 title: Acuti modo
-description: Lorem markdownum tardantis unam mitissima dissimulator inposuit   corpus sintque tura tremenda, nec coetum.
+description: Lorem markdownum tardantis unam mitissima dissimulator
+  inposuit   corpus sintque tura tremenda, nec coetum.
 author: Code Stitch
 date: 2023-06-08T15:26:46.705Z
 tags:
-    - post
-image: https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/people.jpg
-imageAlt: People
+  - post
+  - featured
+image: /assets/images/blog/jordi-vich-navarro-hi6rjdjnch8-unsplash.jpg
+imageAlt: Kitchen
 ---
 
 ## Lacerans aliter tetigit praeterea rite

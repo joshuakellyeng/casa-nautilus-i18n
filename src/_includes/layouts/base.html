@@ -1,62 +1,179 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        {#
-        Created with help from the below repo, outlining all the possible tags that could belong in a <head>.
-        View to explore more tags that may be useful, depending on the type of website being built
-        https://github.com/joshbuchea/HEAD
-        #}
+<html lang="{{ page.lang }}">
+	<head>
+		<!-- Standard meta tags -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="{{ description }}" />
+		<meta name="keywords" content="" />
+		<link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
 
-        {# CS-TODO: Update the _data/client.json file to automatically generate the correct <head> tags for you #}
+		<!--Social Media Display-->
+		<meta property="og:title" content="{{ title }}" />
+		<meta property="og:description" content="{{ description }}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
+		<meta property="og:image" content="/assets/images/logo-small.png" />
+		<meta
+			property="og:image:secure_url"
+			content="/assets/images/logo-small.png"
+		/>
 
-        <!-- UTF character encoding means all characters under UTF-8, including emojis, render correctly -->
-        <meta charset="UTF-8">
+		<!--Favicons-->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/assets/favicons/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/assets/favicons/favicon-32x32.png?v1"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/assets/favicons/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/assets/favicons/site.webmanifest" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
 
-        <!-- Ensures the viewport widths are defined correctly and work on all devices (esp. mobile) -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<!-- Preloads -->
+		<link rel="preload" as="image" href="/assets/svgs/logo-white.svg" />
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/assets/fonts/roboto-v29-latin-regular.woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/assets/fonts/roboto-v29-latin-700.woff2"
+			crossorigin
+		/>
 
-        <!-- May be used in SERP results. Search Engines may also change them, at their discretion. Good to set anyway -->
-        <meta name="description" content="{{ description }}">
+		<!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
+		{% if preloadImg != '' %}
+		<link rel="preload" as="image" href="{{ preloadImg }}" />
+		{% endif %}
 
-        <!-- Identifies eleventy as the generator for this document. Shows in apps like Wappalyzer or BuiltWith. Proves that you're a worthy developer that cares about your product -->
-        <meta name="generator" content="{{ eleventy.generator }}">
+		<!-- Sitewide Stylesheets and Scripts -->
+		<link rel="stylesheet" href="/assets/css/root.css" />
+		<link rel="stylesheet" href="/assets/css/dark.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+			integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- Google font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<script defer src="/assets/js/dark.js"></script>
+		<script defer src="/assets/js/nav.js"></script>
+		<script defer src="/assets/js/faqs.js"></script>
 
-        <!-- Open Graph tags to improve how the website shows up on social media -->
-        {# CS-TODO: Change the OG Tags (image, in particular) to something appropriate for your client #}
-        <meta property="og:title" content="{{ title }}">
-        <meta property="og:description" content="{{ description }}">
-        <meta property="og:url" content="{{ client.domain }}{{ page.url }}">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://codestitch.app/frontend/images/logo.png">
-        <meta property="og:site_name" content="{{ client.name }}">
-        <meta property="og:locale" content="en_US">
-        <meta property="og:image:width" content="1421">
-        <meta property="og:image:height" content="180">
+		<!-- chatbase chatbot -->
+		<script>
+			window.embeddedChatbotConfig = {
+				chatbotId: 'TTyvD2_1g-8-8XtvwfPgG',
+				domain: 'www.chatbase.co',
+			};
+		</script>
+		<script
+			src="https://www.chatbase.co/embed.min.js"
+			chatbotId="TTyvD2_1g-8-8XtvwfPgG"
+			domain="www.chatbase.co"
+			defer
+		></script>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-KTMHRPP3F6"
+		></script>
+		<!-- GA4 Tag -->
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
 
-        <!-- Helps prevent duplicate content issues -->
-        <link rel="canonical" href="{{ client.domain }}{{ page.url }}">
+			if (localStorage.getItem('consentMode') === null) {
+				gtag('consent', 'default', {
+					ad_storage: 'denied',
+					ad_user_data: 'denied',
+					ad_personalization: 'denied',
+					analytics_storage: 'denied',
+					personalization_storage: 'denied',
+					functionality_storage: 'denied',
+					security_storage: 'denied',
+				});
+			} else {
+				gtag(
+					'consent',
+					'default',
+					JSON.parse(localStorage.getItem('consentMode'))
+				);
+			}
 
-        <!-- Sitewide Stylesheets -->
-        <link rel="stylesheet" href="/assets/css/root.css">
-        <link rel="stylesheet" href="/assets/css/dark.css">
+			gtag('js', new Date());
 
-        <!-- Sitewide Scripts -->
-        <script src="/assets/js/dark.js" defer></script>
-        <script src="/assets/js/nav.js" defer></script>
+			gtag('config', 'G-KTMHRPP3F6');
+		</script>
 
-        <!-- Use a head block in any layout extending from base.html to include page-specific <head> tags. It will be included here -->
-        {# CS-TODO: Contrary to the Intermediate Kit, all preloads will need to be done manually from the pages head block. This is so responsive preloads can be achieved when using the optimization branch #}
-        {# https://web.dev/articles/preload-responsive-images #}
-        {% block head %}{% endblock %}
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-PP6MW84F');
+		</script>
+		<!-- End Google Tag Manager -->
 
-        <!-- Uses the title directly from the frontmatter of the page -->
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        {% include "components/header.html" %}
-        <main id="main">
-            {% block body %}{% endblock %}
-        </main>
-        {% include "components/footer.html" %}
-    </body>
+		{% block head %}{% endblock %}
+
+		<!--For home page, use service keywords for the title, including location for SEO.
+        Other pages should just include the page name.
+        
+        EXAMPLE:
+        Home page - House Painting Contractors | Painters and Co. | TestCity, WA
+        About Page - About us | Painters and Co.
+        -->
+		<title>
+			{% if page.url == '/'%} {{ title }} | {{ client.name }} | {{
+			client.address.city }}, {{ client.address.state }} {% else %} {{ title }}
+			| {{ client.name }} {% endif %}
+		</title>
+	</head>
+	<body>
+		<!--Screen reader skip main nav-->
+		<a class="skip" aria-label="skip to main content" href="#main"
+			>Click To Skip To Main Content</a
+		>
+
+		{% include "components/header.html" %}
+		<main id="main">{% block body %}{% endblock %}</main>
+		{% include "components/footer.html" %} {% include "components/consent.html"
+		%}
+	</body>
 </html>
