@@ -3,54 +3,50 @@
 <!-- ============================================ -->
 
 <div id="cookie-consent-banner" class="cookie-consent-banner">
-	<h3>Cookie settings</h3>
-	<p>
-		We use cookies to provide you with the best possible experience. They also
-		allow us to analyze user behavior in order to constantly improve the website
-		for you.
-	</p>
+	<h3>{{ consent[page.lang].header }}</h3>
+	<p>{{ consent[page.lang].text}}</p>
 	<button id="btn-accept-all" class="cookie-consent-button btn-success">
-		Accept All
+		{{ consent[page.lang].all}}
 	</button>
 	<button id="btn-accept-some" class="cookie-consent-button btn-outline">
-		Accept Selection
+		{{ consent[page.lang].some}}
 	</button>
 	<button id="btn-reject-all" class="cookie-consent-button btn-grayscale">
-		Reject All
+		{{ consent[page.lang].none}}
 	</button>
 	<div class="cookie-consent-options">
-		<label
+		<label name="Necessary"
 			><input
 				id="consent-necessary"
 				type="checkbox"
 				value="Necessary"
 				checked
 				disabled
-			/>Necessary</label
-		>
-		<label
+			/>
+			Necessary
+		</label>
+		<label name="Analytics"
 			><input
 				id="consent-analytics"
 				type="checkbox"
 				value="Analytics"
 				checked
-			/>Analytics</label
-		>
-		<label
+			/>
+			Analytics
+		</label>
+		<label name="Preferences"
 			><input
 				id="consent-preferences"
 				type="checkbox"
 				value="Preferences"
 				checked
-			/>Preferences</label
-		>
-		<label
-			><input
-				id="consent-marketing"
-				type="checkbox"
-				value="Marketing"
-			/>Marketing</label
-		>
+			/>
+			Preferences
+		</label>
+		<label name="{{ consent[page.lang].marketing}}"
+			><input id="consent-marketing" type="checkbox" value="Marketing" />
+			Marketing
+		</label>
 	</div>
 </div>
 

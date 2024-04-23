@@ -1,0 +1,21 @@
+{
+    "en":{
+        "home": "Home",
+        "about": "About Us",
+        "blog": "Blog",
+        "gallery": "Gallery",
+        "faqs": "FAQs",
+        "extended_stays": "Extended Stays",
+        "book_now": "Book Now"
+
+    },
+    "es":{
+        "home": "Inicio",
+        "about": "Sobre Nosotros",
+        "blog": "Blog",
+        "gallery": "Galería",
+        "faqs": "Preguntas Frecuentes",
+        "extended_stays": "Estancias Prolongadas",
+        "book_now": "Reservar Ahora"
+    }
+}

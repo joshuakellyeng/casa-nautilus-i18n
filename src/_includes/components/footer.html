@@ -19,35 +19,43 @@
 			<div class="lists">
 				<ul>
 					<li>
-						<h2>Sitemap</h2>
+						<h2>{{ footer[page.lang].sitemap }}</h2>
 					</li>
 					<li>
-						<a href="/">Home</a>
+						<a href=" {{ '/' | locale_url }} ">{{ footer[page.lang].home }}</a>
 					</li>
 					<li>
-						<a href="/about">About Us</a>
+						<a href="{{ '/about' | locale_url }}"
+							>{{ footer[page.lang].about }}</a
+						>
 					</li>
 					<li>
-						<a href="/blog">Blog</a>
+						<a href="/blog">{{ footer[page.lang].blog }}</a>
 					</li>
 					<li>
-						<a href="/gallery">Gallery</a>
+						<a href="{{ '/gallery' | locale_url }}"
+							>{{ footer[page.lang].gallery }}</a
+						>
 					</li>
 					<li>
-						<a href="/faqs">FAQs</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<h2>Help</h2>
-					</li>
-					<li>
-						<a onclick="openModal('modal-2')">Privacy Policy</a>
+						<a href="{{ '/faqs' | locale_url }}"
+							>{{ footer[page.lang].faqs }}</a
+						>
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<h2>Contact</h2>
+						<h2>{{ footer[page.lang].help }}</h2>
+					</li>
+					<li>
+						<a onclick="openModal('modal-2')"
+							>{{ footer[page.lang].privacy }}</a
+						>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>{{footer[page.lang].contact}}</h2>
 					</li>
 					<li>
 						<a href="https://maps.app.goo.gl/JJjT9sNTxz3eGFC86">

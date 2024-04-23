@@ -1,0 +1,24 @@
+{
+    "en":{
+        "sitemap": "Sitemap",
+        "home": "Home",
+        "about": "About Us",
+        "blog": "Blog",
+        "gallery": "Gallery",
+        "faqs": "FAQs",
+        "help": "Help",
+        "privacy": "Privacy Policy",
+        "contact": "Contact"
+    },
+    "es":{
+        "sitemap": "Mapa del sitio",
+        "home": "Inicio",
+        "about": "Sobre Nosotros",
+        "blog": "Blog",
+        "gallery": "Galería",
+        "faqs": "Preguntas Frecuentes",
+        "help": "Ayuda",
+        "privacy": "Política de Privacidad",
+        "contact": "Contacto"
+    }
+}

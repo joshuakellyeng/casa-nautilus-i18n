@@ -1,11 +1,5 @@
 ---
-title: 'About Us'
-description: ''
 preloadImg: '/assets/images/door.webp'
-permalink: 'about/'
-eleventyNavigation:
-  key: About Us
-  order: 200
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
@@ -16,7 +10,7 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="int-hero">
-	<h1 id="home-h">About Us</h1>
+	<h1 id="home-h">{{hero.title}}</h1>
 	<picture>
 		<source media="(max-width: 600px)" srcset="/assets/images/door.webp" />
 		<source media="(min-width: 601px)" srcset="/assets/images/door.webp" />
@@ -24,7 +18,7 @@ eleventyNavigation:
 			aria-hidden="true"
 			decoding="async"
 			src="/assets/images/door.webp"
-			alt="kitchen cabinets"
+			alt="{{hero.imgAlt}}"
 			loading="eager"
 			width="2500"
 			height="1667"
@@ -60,7 +54,7 @@ eleventyNavigation:
 					aria-hidden="true"
 					decoding="async"
 					src="/assets/images/plaza.webp"
-					alt="house"
+					alt="sbs.imgAlt"
 					loading="lazy"
 					width="400"
 					height="563"
@@ -69,27 +63,10 @@ eleventyNavigation:
 		</div>
 		<!-- Right Content Section-->
 		<div class="cs-right">
-			<span class="cs-topper">About Us</span>
-			<h2 class="cs-title">History</h2>
-			<p class="cs-text">
-				Casa Nautiluz stands as a beacon of comfort and historical charm in the
-				heart of Cadiz's oldest neighborhood, El Populo. This guesthouse,
-				celebrated for its prime location and highly rated accommodations,
-				offers a unique blend of modern amenities and a deeply rooted sense of
-				place. Nestled within the winding streets of El Populo, Casa Nautiluz is
-				just steps away from the city's most venerable landmarks, including
-				Cadiz Cathedral and the ancient city walls that whisper tales of
-				Phoenician founders and centuries of maritime significance.
-			</p>
-			<p class="cs-text">
-				The Populo neighborhood itself is a living museum, where every corner
-				tells a story of conquests, trade, and cultural exchanges. It's among
-				the first areas to be fortified when Cadiz began its transformation into
-				a pivotal naval base in the ancient world. The narrow, labyrinthine
-				streets of El Populo are flanked by buildings that date back to the
-				Middle Ages, offering a picturesque backdrop that contrasts beautifully
-				with the modern comforts provided by Casa Nautiluz.
-			</p>
+			<span class="cs-topper">{{sbs.topper}}</span>
+			<h2 class="cs-title">{{sbs.title}}</h2>
+			<p class="cs-text">{{sbs.text1}}</p>
+			<p class="cs-text">{{sbs.text2}}</p>
 		</div>
 	</div>
 </section>
@@ -102,19 +79,11 @@ eleventyNavigation:
 	<div class="cs-container">
 		<div class="cs-content">
 			<div class="cs-flex">
-				<span class="cs-topper">Come and Visit</span>
-				<h2 class="cs-title">The Neighborhood</h2>
+				<span class="cs-topper">{{gallery.topper}}</span>
+				<h2 class="cs-title">{{gallery.title}}</h2>
 			</div>
 			<div class="cs-flex">
-				<p class="cs-text">
-					El Pópulo, the oldest part of Cadiz, offers a deep dive into the
-					city's rich historical and cultural tapestry. Dating back to the 13th
-					century, this neighborhood is recognized as the medieval heart of
-					Cadiz, nestled between the Town Hall and the Cathedral. Its three
-					ancient arches - Arco de la Rosa, Arco del Pópulo, and Arco de los
-					Blancos - stand as gateways to this historic quarter, each telling a
-					story of the area's past and its significance over the centuries
-				</p>
+				<p class="cs-text">{{gallery.text}}</p>
 			</div>
 		</div>
 		<div class="cs-image-group">
@@ -131,7 +100,7 @@ eleventyNavigation:
 					loading="lazy"
 					decoding="async"
 					src="/assets/images/cathedral1.webp"
-					alt="A Cathedral in Cadiz"
+					alt="{{gallery.imgAlt1}}"
 					width="380"
 					height="271"
 				/>
@@ -149,7 +118,7 @@ eleventyNavigation:
 					loading="lazy"
 					decoding="async"
 					src="/assets/images/caleta.webp"
-					alt="Boats on the beach of La Caleta"
+					alt="{{gallery.imgAlt2}}"
 					width="380"
 					height="271"
 				/>
@@ -167,7 +136,7 @@ eleventyNavigation:
 					loading="lazy"
 					decoding="async"
 					src="/assets/images/teatro.webp"
-					alt="The grand theatre Falla of Cadiz"
+					alt="{{gallery.imgAlt3}}"
 					width="780"
 					height="582"
 				/>
@@ -185,7 +154,7 @@ eleventyNavigation:
 					loading="lazy"
 					decoding="async"
 					src="/assets/images/castle.webp"
-					alt="A large Cathedral"
+					alt="{{gallery.imgAlt4}}"
 					width="780"
 					height="582"
 				/>
@@ -203,7 +172,7 @@ eleventyNavigation:
 					loading="lazy"
 					decoding="async"
 					src="/assets/images/beach1.webp"
-					alt="Beach sunset"
+					alt="{{gallery.imgAlt5}}"
 					width="380"
 					height="271"
 				/>
@@ -221,7 +190,7 @@ eleventyNavigation:
 					loading="lazy"
 					decoding="async"
 					src="/assets/images/sunset.webp"
-					alt="a sunset on a beach"
+					alt="{{gallery.imgAlt6}}"
 					width="380"
 					height="271"
 				/>

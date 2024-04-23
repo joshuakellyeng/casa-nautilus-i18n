@@ -5,28 +5,26 @@
 <section id="cta-488">
 	<div class="cs-container">
 		<div class="cs-content">
-			<span class="cs-topper">Staying for a month or more?</span>
-			<h2 class="cs-title">
-				Take a look at our Student Accomodations and Extended Stays!
-			</h2>
+			<span class="cs-topper">{{ cta[page.lang].topper }}</span>
+			<h2 class="cs-title">{{ cta[page.lang].title }}</h2>
 			<a href="https://spanishgalleonlodge.com" class="cs-button-solid"
-				>Book Now</a
+				>{{ cta[page.lang].button}}</a
 			>
 		</div>
 	</div>
 	<picture class="cs-background">
 		<source
 			media="(max-width: 600px)"
-			srcset="./assets/images/sunset-boat.webp"
+			srcset="/assets/images/sunset-boat.webp"
 		/>
 		<source
 			media="(min-width: 601px)"
-			srcset="./assets/images/sunset-boat.webp"
+			srcset="/assets/images/sunset-boat.webp"
 		/>
 		<img
 			loading="lazy"
 			decoding="async"
-			src="./assets/images/sunset-boat.webp"
+			src="/assets/images/sunset-boat.webp"
 			alt="meeting"
 			width="1920"
 			height="543"

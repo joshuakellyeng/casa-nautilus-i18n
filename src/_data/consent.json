@@ -1,0 +1,24 @@
+{
+    "en":{
+        "header": "Cookie Settings",
+        "text": "We use cookies to provide you with the best possible experience. They also allow us to analyze user behavior in order to constantly improve the website for you.",
+        "all": "Accept All",
+        "some": "Accept Selection",
+        "none": "Reject All",
+        "necessary": "Necessary",
+        "analytics": "Analytics",
+        "pref": "Preferences",
+        "marketing": "Marketing"
+    },
+    "es":{
+        "header": "Configuración de Cookies",
+        "text": "Utilizamos cookies para proporcionarte la mejor experiencia posible. También nos permiten analizar el comportamiento del usuario para mejorar constantemente el sitio web para ti.",
+        "all": "Aceptar Todas",
+        "some": "Aceptar Selección",
+        "none": "Rechazar Todas",
+        "necessary": "Necesarias",
+        "analytics": "Analíticas",
+        "pref": "Preferencias",
+        "marketing": "Marketing"      
+    }
+}

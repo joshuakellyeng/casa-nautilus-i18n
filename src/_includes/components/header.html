@@ -63,18 +63,18 @@
 				<ul id="cs-expanded" class="cs-ul" aria-expanded="false">
 					<li class="cs-li">
 						<a
-							href="/"
+							href=" {{ '/' | locale_url }} "
 							class="cs-li-link {{ 'cs-active' if '' == page.fileSlug }}"
 						>
-							Home
+							{{ header[page.lang].home }}
 						</a>
 					</li>
 					<li class="cs-li">
 						<a
-							href="/about"
+							href="{{ '/about' | locale_url }}"
 							class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}"
 						>
-							About Us
+							{{ header[page.lang].about }}
 						</a>
 					</li>
 					<li class="cs-li">
@@ -82,24 +82,24 @@
 							href="/blog"
 							class="cs-li-link {{ 'cs-active' if 'blog' == page.fileSlug }}"
 						>
-							Blog
+							{{ header[page.lang].blog }}
 						</a>
 					</li>
 					<li class="cs-li">
 						<a
-							href="/gallery"
+							href="{{ '/gallery' | locale_url }}"
 							class="cs-li-link {{ 'cs-active' if 'gallery' == page.fileSlug }}"
 						>
-							Gallery
+							{{ header[page.lang].gallery }}
 						</a>
 					</li>
 
 					<li class="cs-li">
 						<a
-							href="/faqs"
+							href="{{ '/faqs' | locale_url }}"
 							class="cs-li-link {{ 'cs-active' if 'faqs' == page.fileSlug }}"
 						>
-							FAQs
+							{{ header[page.lang].faqs }}
 						</a>
 					</li>
 					<li class="cs-li">
@@ -107,25 +107,9 @@
 							href="https://spanishgalleonlodge.com"
 							class="cs-li-link"
 							target="_blank"
-							>Extended Stays</a
+							>{{ header[page.lang].extended_stays }}</a
 						>
 					</li>
-
-					<!-- Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work -->
-					<!-- <li class="cs-li cs-dropdown" tabindex="0">
-						<span class="cs-li-link">
-							More
-							<i class="fa fa-solid fa-chevron-down"></i>
-						</span>
-						<ul class="cs-drop-ul">
-							<li class="cs-drop-li">
-								<a href="/gallery" class="cs-li-link cs-drop-link">Gallery</a>
-							</li>
-							<li class="cs-drop-li">
-								<a href="/reviews" class="cs-li-link cs-drop-link">Reviews</a>
-							</li>
-						</ul>
-					</li>  -->
 				</ul>
 			</div>
 		</nav>
@@ -134,7 +118,7 @@
 			class="cs-button-solid cs-nav-button"
 			target="_blank"
 		>
-			Book Now
+			{{ header[page.lang].book_now }}
 		</a>
 		<!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
 		<button id="dark-mode-toggle" aria-label="dark mode toggle">

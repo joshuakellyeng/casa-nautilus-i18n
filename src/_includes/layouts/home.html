@@ -1,11 +1,5 @@
 ---
-title: 'Casa Nautilus'
-description: 'Your Stay in Cadiz Spain'
 preloadImg: '/assets/images/tower.webp'
-permalink: '/'
-eleventyNavigation:
-  key: Home
-  order: 100
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
@@ -36,13 +30,13 @@ eleventyNavigation:
 <section id="hero-219">
 	<div class="cs-container">
 		<h1 class="cs-title">{{ hero.title }}</h1>
-		<p class="cs-text">Your Oasis in Cadiz</p>
+		<p class="cs-text">{{ hero.text }}</p>
 		<a
 			href="https://hotels.cloudbeds.com/en/reservation/1qSOee"
 			class="cs-button-solid"
 			target="_blank"
 		>
-			Reserve Your Stay
+			{{ hero.button }}
 		</a>
 	</div>
 
@@ -53,7 +47,7 @@ eleventyNavigation:
 		<img
 			decoding="async"
 			src="/assets/images/tower.webp"
-			alt="tower in cadiz"
+			alt="{{ hero.bgImg }}"
 			width="2250"
 			height="1500"
 			aria-hidden="true"
@@ -68,17 +62,9 @@ eleventyNavigation:
 <section id="services-285">
 	<div class="cs-container">
 		<div class="cs-content">
-			<span class="cs-topper">Best-In-Class</span>
-			<h2 class="cs-title">Our Amenaties</h2>
-			<p class="cs-text">
-				Casa Nautiluz offers a range of amenities tailored to enhance the
-				comfort and convenience of guests during their stay in Cadiz, Spain.
-				From elegantly appointed rooms exuding charm and sophistication to
-				personalized service that anticipates every need, guests can expect a
-				seamless experience. Whether unwinding in the cozy accommodations or
-				discovering the rich history of Cadiz, Casa Nautiluz promises a
-				memorable retreat in the heart of this enchanting city.
-			</p>
+			<span class="cs-topper">{{ services.topper }}</span>
+			<h2 class="cs-title">{{ services.title }}</h2>
+			<p class="cs-text">{{ services.text }}</p>
 		</div>
 		<ul class="cs-card-group">
 			<li class="cs-item">
@@ -86,7 +72,7 @@ eleventyNavigation:
 					<picture class="cs-picture">
 						<img
 							class="cs-icon"
-							src="./assets/svgs/air-conditioner.svg"
+							src="/assets/svgs/air-conditioner.svg"
 							loading="lazy"
 							decoding="async"
 							alt="icon"
@@ -95,12 +81,8 @@ eleventyNavigation:
 							aria-hidden="true"
 						/>
 					</picture>
-					<h3 class="cs-h3">Air Conditioning / Heating</h3>
-					<p class="cs-item-text">
-						Enjoy personalized comfort with heating and cooling units in every
-						room, ensuring an optimal and cozy ambiance throughout your stay in
-						Cadiz.
-					</p>
+					<h3 class="cs-h3">{{ services.serviceOneTitle }}</h3>
+					<p class="cs-item-text">{{ services.serviceOneText }}</p>
 				</a>
 			</li>
 			<li class="cs-item">
@@ -108,7 +90,7 @@ eleventyNavigation:
 					<picture class="cs-picture">
 						<img
 							class="cs-icon"
-							src="./assets/svgs/elevator.svg"
+							src="/assets/svgs/elevator.svg"
 							loading="lazy"
 							decoding="async"
 							alt="icon"
@@ -117,12 +99,8 @@ eleventyNavigation:
 							aria-hidden="true"
 						/>
 					</picture>
-					<h3 class="cs-h3">Wheelchair Accessible</h3>
-					<p class="cs-item-text">
-						Experience convenience and accessibility at Casa Nautilus, where our
-						elevator ensures effortless mobility, allowing you to navigate our
-						boutique hotel with ease.
-					</p>
+					<h3 class="cs-h3">{{ services.serviceTwoTitle }}</h3>
+					<p class="cs-item-text">{{ services.serviceTwoText }}</p>
 				</a>
 			</li>
 			<li class="cs-item">
@@ -130,7 +108,7 @@ eleventyNavigation:
 					<picture class="cs-picture">
 						<img
 							class="cs-icon"
-							src="./assets/svgs/wifi.svg"
+							src="/assets/svgs/wifi.svg"
 							loading="lazy"
 							decoding="async"
 							alt="icon"
@@ -139,12 +117,8 @@ eleventyNavigation:
 							aria-hidden="true"
 						/>
 					</picture>
-					<h3 class="cs-h3">Free Wi-Fi</h3>
-					<p class="cs-item-text">
-						Stay seamlessly connected with complimentary high-speed Wi-Fi,
-						ensuring you can effortlessly blend your coastal retreat with work
-						or leisure.
-					</p>
+					<h3 class="cs-h3">{{ services.serviceThreeTitle }}</h3>
+					<p class="cs-item-text">{{ services.serviceThreeText }}</p>
 				</a>
 			</li>
 			<li class="cs-item">
@@ -152,7 +126,7 @@ eleventyNavigation:
 					<picture class="cs-picture">
 						<img
 							class="cs-icon"
-							src="./assets/svgs/laundry-service.svg"
+							src="/assets/svgs/laundry-service.svg"
 							loading="lazy"
 							decoding="async"
 							alt="icon"
@@ -161,12 +135,8 @@ eleventyNavigation:
 							aria-hidden="true"
 						/>
 					</picture>
-					<h3 class="cs-h3">Laundry Service</h3>
-					<p class="cs-item-text">
-						Our boutique hotel offers hassle-free laundry services, ensuring
-						that you can enjoy a fresh and relaxing experience leaving you more
-						time to immerse yourself in the beauty of Cadiz.
-					</p>
+					<h3 class="cs-h3">{{ services.serviceFourTitle }}</h3>
+					<p class="cs-item-text">{{ services.serviceFourText }}</p>
 				</a>
 			</li>
 			<li class="cs-item">
@@ -174,7 +144,7 @@ eleventyNavigation:
 					<picture class="cs-picture">
 						<img
 							class="cs-icon"
-							src="./assets/svgs/room-service.svg"
+							src="/assets/svgs/room-service.svg"
 							loading="lazy"
 							decoding="async"
 							alt="icon"
@@ -183,11 +153,8 @@ eleventyNavigation:
 							aria-hidden="true"
 						/>
 					</picture>
-					<h3 class="cs-h3">Room Services</h3>
-					<p class="cs-item-text">
-						Comprehensive room services, including housekeeping, concierge,
-						ensuring a comfortable and enjoyable stay for guests at our hotel.
-					</p>
+					<h3 class="cs-h3">{{services.serviceFiveTitle}}</h3>
+					<p class="cs-item-text">{{services.serviceFiveText}}</p>
 				</a>
 			</li>
 			<li class="cs-item">
@@ -195,7 +162,7 @@ eleventyNavigation:
 					<picture class="cs-picture">
 						<img
 							class="cs-icon"
-							src="./assets/svgs/terrace-chair.svg"
+							src="/assets/svgs/terrace-chair.svg"
 							loading="lazy"
 							decoding="async"
 							alt="icon"
@@ -204,11 +171,8 @@ eleventyNavigation:
 							aria-hidden="true"
 						/>
 					</picture>
-					<h3 class="cs-h3">Rooftop Terrace</h3>
-					<p class="cs-item-text">
-						Indulge in stunning vistas at Casa Nautilus' rooftop terrace,
-						offering breathtaking views of Cadiz and the ocean.
-					</p>
+					<h3 class="cs-h3">{{services.serviceSixTitle}}</h3>
+					<p class="cs-item-text">{{services.serviceSixText}}</p>
 				</a>
 			</li>
 		</ul>
@@ -216,31 +180,27 @@ eleventyNavigation:
 </section>
 
 <!-- ============================================ -->
-<!--                     CTA                      -->
+<!--                     CTA1                      -->
 <!-- ============================================ -->
 
 <section id="cta-51">
 	<div class="cs-container">
 		<div class="cs-content">
-			<span class="cs-topper">Welcome to Casa Nautilus</span>
-			<h2 class="cs-title">A Coastal Beauty with Historic Charm</h2>
-			<p class="cs-text">
-				Experience the boutique allure of Casa Nautilus in Cadiz's heart. Unwind
-				in uniquely designed rooms that perfectly capture the essence of coastal
-				chic.
-			</p>
-			<a href="/about" class="cs-button-solid">Explore Our History</a>
+			<span class="cs-topper">{{ cta1.topper }}</span>
+			<h2 class="cs-title">{{ cta1.title }}</h2>
+			<p class="cs-text">{{ cta1.text }}</p>
+			<a href="/about" class="cs-button-solid">{{ cta1.button }}</a>
 		</div>
 	</div>
 	<!-- Background Image-->
 	<picture class="cs-picture">
-		<source media="(max-width: 600px)" srcset="./assets/images/skyline.webp" />
-		<source media="(min-width: 601px)" srcset="./assets/images/skyline.webp" />
+		<source media="(max-width: 600px)" srcset="/assets/images/skyline.webp" />
+		<source media="(min-width: 601px)" srcset="/assets/images/skyline.webp" />
 		<img
 			loading="lazy"
 			decoding="async"
-			src="./assets/images/skyline.webp"
-			alt="cadiz skyline photo of the coast"
+			src="/assets/images/skyline.webp"
+			alt="{{ cta.imgAlt }}"
 			width="1920"
 			height="1280"
 			aria-hidden="true"
@@ -255,8 +215,8 @@ eleventyNavigation:
 <section id="services-1355">
 	<div class="cs-container">
 		<div class="cs-content">
-			<span class="cs-topper">Local Attractions</span>
-			<h2 class="cs-title">Your Getaway is Calling</h2>
+			<span class="cs-topper">{{services2.topper}}</span>
+			<h2 class="cs-title">{{services2.title}}</h2>
 		</div>
 		<ul class="cs-card-group">
 			<li class="cs-item">
@@ -266,22 +226,22 @@ eleventyNavigation:
 					class="cs-link"
 				>
 					<h3 class="cs-h3">
-						<span class="cs-span">Events</span> + Activities
+						<span class="cs-span">{{services2.text1}}</span>
 					</h3>
 				</a>
 				<picture class="cs-background">
 					<source
 						media="(max-width: 600px)"
-						srcset="./assets/images/surf.webp"
+						srcset="/assets/images/surf.webp"
 					/>
 					<source
 						media="(min-width: 601px)"
-						srcset="./assets/images/surf.webp"
+						srcset="/assets/images/surf.webp"
 					/>
 					<img
 						decoding="async"
-						src="./assets/images/surf.webp"
-						alt="construction"
+						src="/assets/images/surf.webp"
+						alt="{{services2.imgAlt1}}"
 						width="305"
 						height="305"
 						aria-hidden="true"
@@ -294,21 +254,23 @@ eleventyNavigation:
 					target="_blank"
 					class="cs-link"
 				>
-					<h3 class="cs-h3"><span class="cs-span">Food</span> + Drinks</h3>
+					<h3 class="cs-h3">
+						<span class="cs-span">{{ services2.text2 }}</span>
+					</h3>
 				</a>
 				<picture class="cs-background">
 					<source
 						media="(max-width: 600px)"
-						srcset="./assets/images/croquets.webp"
+						srcset="/assets/images/croquets.webp"
 					/>
 					<source
 						media="(min-width: 601px)"
-						srcset="./assets/images/croquets.webp"
+						srcset="/assets/images/croquets.webp"
 					/>
 					<img
 						decoding="async"
-						src="./assets/images/croquets.webp"
-						alt="construction"
+						src="/assets/images/croquets.webp"
+						alt="{{services2.imgAlt2}}"
 						width="305"
 						height="305"
 						aria-hidden="true"
@@ -321,21 +283,23 @@ eleventyNavigation:
 					target="_blank"
 					class="cs-link"
 				>
-					<h3 class="cs-h3"><span class="cs-span">Relax</span> + Explore</h3>
+					<h3 class="cs-h3">
+						<span class="cs-span">{{ services2.text3 }}</span>
+					</h3>
 				</a>
 				<picture class="cs-background">
 					<source
 						media="(max-width: 600px)"
-						srcset="./assets/images/cathedral.webp"
+						srcset="/assets/images/cathedral.webp"
 					/>
 					<source
 						media="(min-width: 601px)"
-						srcset="./assets/images/cathedral.webp"
+						srcset="/assets/images/cathedral.webp"
 					/>
 					<img
 						decoding="async"
-						src="./assets/images/cathedral.webp"
-						alt="construction"
+						src="/assets/images/cathedral.webp"
+						alt="{{ services2.imgAlt3}}"
 						width="305"
 						height="305"
 						aria-hidden="true"
@@ -355,8 +319,8 @@ eleventyNavigation:
 <section id="reviews-1672">
 	<div class="cs-container">
 		<div class="cs-content">
-			<span class="cs-topper">Stay In The Heart Of Cadiz</span>
-			<h2 class="cs-title">Our Guests Reviews</h2>
+			<span class="cs-topper">{{reviews.topper}}</span>
+			<h2 class="cs-title">{{reviews.title}}</h2>
 		</div>
 		<ul class="cs-card-group">
 			<li class="cs-item">
@@ -375,7 +339,7 @@ eleventyNavigation:
 					</picture>
 					<span class="cs-name">
 						Cristina P.
-						<span class="cs-job">May 2023</span>
+						<span class="cs-job">{{reviews.date1}}</span>
 					</span>
 				</div>
 				<div class="wrapper">
@@ -389,15 +353,7 @@ eleventyNavigation:
 						width="96"
 						height="16"
 					/>
-					<p class="cs-review">
-						Our stay at Casa Nautilus exceeded all expectations! We were
-						pleasantly surprised by the interior room's tranquility and
-						spaciousness despite the absence of an outside window. It was
-						impeccably clean and equipped with all necessary amenities,
-						including air conditioning, TV, and a hairdryer. The complimentary
-						welcome beer was a thoughtful touch, and mornings on the rooftop
-						terrace with coffee were serene.
-					</p>
+					<p class="cs-review">{{reviews.review1}}</p>
 				</div>
 				<!--Quote Icon-->
 				<img
@@ -426,7 +382,7 @@ eleventyNavigation:
 					</picture>
 					<span class="cs-name">
 						Fernando Q.
-						<span class="cs-job">Dec 2023</span>
+						<span class="cs-job">{{reviews.date2}}</span>
 					</span>
 				</div>
 				<div class="wrapper">
@@ -440,14 +396,7 @@ eleventyNavigation:
 						width="96"
 						height="16"
 					/>
-					<p class="cs-review">
-						Casa Nautilus offers excellent accommodation right in the heart of
-						Cadiz. The rooms are clean, cozy, and come with all the essentials
-						for a comfortable stay. We particularly enjoyed the nautical theme
-						throughout the hotel, adding to its charm. The location couldn't be
-						better, just steps away from the cathedral and within a convenient
-						10-minute walk from the train station.
-					</p>
+					<p class="cs-review">{{reviews.review2}}</p>
 				</div>
 				<!--Quote Icon-->
 				<img
@@ -476,7 +425,7 @@ eleventyNavigation:
 					</picture>
 					<span class="cs-name">
 						Sarah S.
-						<span class="cs-job">Jun 2023</span>
+						<span class="cs-job">{{reviews.date3}}</span>
 					</span>
 				</div>
 				<div class="wrapper">
@@ -490,15 +439,7 @@ eleventyNavigation:
 						width="96"
 						height="16"
 					/>
-					<p class="cs-review">
-						My recent stay at Casa Nautilus was nothing short of delightful!
-						From the moment we arrived, we were impressed by the boutique charm
-						and attentive service. Our interior room, though lacking an outside
-						window, provided a quiet retreat and was equipped with all the
-						necessary amenities. The rooftop terrace, with its captivating
-						views, was a highlight of our mornings. The hotel's attention to
-						detail and affordable rates truly set it apart.
-					</p>
+					<p class="cs-review">{{reviews.review3}}</p>
 				</div>
 				<!--Quote Icon-->
 				<img
