@@ -8,20 +8,22 @@ eleventyNavigation:
   order: 300
 ---
 
-{% extends "layouts/base.html" %} {% block head %}
-<link rel="stylesheet" href="/assets/css/projects.css" />
-{% endblock %} {% block body %}
+{% extends "layouts/base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/projects.css"/>
+{% endblock %}
+{% block body %}
 
-<!-- ============================================ -->
-<!--                    LANDING                   -->
-<!-- ============================================ -->
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
 
-<section id="int-hero">
-	<h1 id="home-h">Our Accomodations</h1>
-	<picture>
-		<source media="(max-width: 600px)" srcset="/assets/images/castle.webp" />
-		<source media="(min-width: 601px)" srcset="/assets/images/castle.webp" />
-		<img
+    <section id="int-hero">
+        <h1 id="home-h">Our Accomodations</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/castle.webp"/>
+            <source media="(min-width: 601px)" srcset="/assets/images/castle.webp"/>
+            <img
 			aria-hidden="true"
 			decoding="async"
 			src="/assets/images/castle.webp"
@@ -30,28 +32,28 @@ eleventyNavigation:
 			width="2500"
 			height="1667"
 		/>
-	</picture>
-</section>
+        </picture>
+    </section>
 
-<!-- ============================================ -->
-<!--                   Gallery                    -->
-<!-- ============================================ -->
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
 
-<section id="gallery">
-	<div class="cs-container">
-		<div class="cs-image-group">
-			<!-- Row 1-->
-			<div class="cs-row cs-row-1">
-				<picture class="cs-picture cs-picture1">
-					<source
+    <section id="gallery">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <!-- Row 1-->
+                <div class="cs-row cs-row-1">
+                    <picture class="cs-picture cs-picture1">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/pillow1.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/pillow1.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						srcset="/assets/images/portfolio/pillow1.webp"
@@ -60,17 +62,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture2">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/plant.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/plant.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/plant.webp"
@@ -79,17 +81,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture3">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/double-balcony.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/double-balcony.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/double-balcony.webp"
@@ -98,17 +100,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture1">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture1">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/postcard.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/postcard.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/postcard.webp"
@@ -117,17 +119,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture2">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/master.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/master.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/master.webp"
@@ -136,17 +138,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture3">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/bath2.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/bath2.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/bath2.webp"
@@ -155,21 +157,21 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-			</div>
-			<!-- Row 2 -->
-			<div class="cs-row cs-row-2">
-				<picture class="cs-picture cs-picture1">
-					<source
+                    </picture>
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                </div>
+                <!-- Row 2 -->
+                <div class="cs-row cs-row-2">
+                    <picture class="cs-picture cs-picture1">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/room-balcony.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/room-balcony.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/room-balcony.webp"
@@ -178,17 +180,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture2">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/globe.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/globe.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						srcset="/assets/images/portfolio/globe.webp"
@@ -197,17 +199,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture3">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/double-bed.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/double-bed.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/double-bed.webp"
@@ -216,18 +218,18 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<!-- Additional Images -->
-				<picture class="cs-picture cs-picture1">
-					<source
+                    </picture>
+                    <!-- Additional Images -->
+                    <picture class="cs-picture cs-picture1">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/roof1.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/roof1.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/roof1.webp"
@@ -236,17 +238,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture2">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/coffee-balcony.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/coffee-balcony.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/coffee-balcony.webp"
@@ -255,17 +257,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture3">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/skylight.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/skylight.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/skylight.webp"
@@ -274,21 +276,21 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-			</div>
-			<!-- Row 3 -->
-			<div class="cs-row cs-row-3">
-				<picture class="cs-picture cs-picture1">
-					<source
+                    </picture>
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                </div>
+                <!-- Row 3 -->
+                <div class="cs-row cs-row-3">
+                    <picture class="cs-picture cs-picture1">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/entrance.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/entrance.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/entrance.webp"
@@ -297,17 +299,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture2">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/bed-single.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/bed-single.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/bed-single.webp"
@@ -316,17 +318,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture3">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/room1.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/room1.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/room1.webp"
@@ -335,18 +337,18 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<!-- Additional Images -->
-				<picture class="cs-picture cs-picture1">
-					<source
+                    </picture>
+                    <!-- Additional Images -->
+                    <picture class="cs-picture cs-picture1">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/pillow2.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/pillow2.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/pillow2.webp"
@@ -355,17 +357,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture2">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/bath1.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/bath1.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/bath1.webp"
@@ -374,17 +376,17 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<picture class="cs-picture cs-picture3">
-					<source
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source
 						media="(max-width: 600px)"
 						srcset="/assets/images/portfolio/room-1st-fl.webp"
 					/>
-					<source
+                        <source
 						media="(min-width: 601px)"
 						srcset="/assets/images/portfolio/room-1st-fl.webp"
 					/>
-					<img
+                        <img
 						aria-hidden="true"
 						decoding="async"
 						src="/assets/images/portfolio/room-1st-fl.webp"
@@ -393,11 +395,11 @@ eleventyNavigation:
 						width="400"
 						height="560"
 					/>
-				</picture>
-				<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-			</div>
-		</div>
-	</div>
-</section>
+                    </picture>
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

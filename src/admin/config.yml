@@ -108,7 +108,6 @@ collections:
       i18n: true
       folder: src/content/blog
       create: true
-      slug: "{{slug}}"
       fields:
           - label: Title
             name: title
