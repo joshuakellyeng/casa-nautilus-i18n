@@ -3,19 +3,19 @@
 <!-- ============================================ -->
 
 <div id="cookie-consent-banner" class="cookie-consent-banner">
-	<h3>{{ consent[page.lang].header }}</h3>
-	<p>{{ consent[page.lang].text}}</p>
-	<button id="btn-accept-all" class="cookie-consent-button btn-success">
-		{{ consent[page.lang].all}}
-	</button>
-	<button id="btn-accept-some" class="cookie-consent-button btn-outline">
-		{{ consent[page.lang].some}}
-	</button>
-	<button id="btn-reject-all" class="cookie-consent-button btn-grayscale">
-		{{ consent[page.lang].none}}
-	</button>
-	<div class="cookie-consent-options">
-		<label name="necessary"
+    <h3>{{ consent[page.lang].header }}</h3>
+    <p>{{ consent[page.lang].text}}</p>
+    <button id="btn-accept-all" class="cookie-consent-button btn-success">
+        {{ consent[page.lang].all}}
+    </button>
+    <button id="btn-accept-some" class="cookie-consent-button btn-outline">
+        {{ consent[page.lang].some}}
+    </button>
+    <button id="btn-reject-all" class="cookie-consent-button btn-grayscale">
+        {{ consent[page.lang].zero}}
+    </button>
+    <div class="cookie-consent-options">
+        <label name="necessary"
 			><input
 				id="consent-necessary"
 				type="checkbox"
@@ -25,7 +25,7 @@
 			/>
 			Necessary
 		</label>
-		<label name="analytics"
+        <label name="analytics"
 			><input
 				id="consent-analytics"
 				type="checkbox"
@@ -34,7 +34,7 @@
 			/>
 			Analytics
 		</label>
-		<label name="preferences"
+        <label name="preferences"
 			><input
 				id="consent-preferences"
 				type="checkbox"
@@ -43,67 +43,85 @@
 			/>
 			Preferences
 		</label>
-		<label name="marketing"
-			><input id="consent-marketing" type="checkbox" value="Marketing" />
+        <label name="marketing"
+			><input id="consent-marketing" type="checkbox" value="Marketing"/>
 			Marketing
 		</label>
-	</div>
+    </div>
 </div>
 
 <script>
-	function hideBanner() {
-		document.getElementById('cookie-consent-banner').style.display = 'none';
-	}
+    function hideBanner() {
+        document
+            .getElementById('cookie-consent-banner')
+            .style
+            .display = 'none';
+    }
 
-	if (localStorage.getItem('consentMode') === null) {
-		document
-			.getElementById('btn-accept-all')
-			.addEventListener('click', function () {
-				setConsent({
-					necessary: true,
-					analytics: true,
-					preferences: true,
-					marketing: true,
-				});
-				hideBanner();
-			});
-		document
-			.getElementById('btn-accept-some')
-			.addEventListener('click', function () {
-				setConsent({
-					necessary: true,
-					analytics: document.getElementById('consent-analytics').checked,
-					preferences: document.getElementById('consent-preferences').checked,
-					marketing: document.getElementById('consent-marketing').checked,
-				});
-				hideBanner();
-			});
-		document
-			.getElementById('btn-reject-all')
-			.addEventListener('click', function () {
-				setConsent({
-					necessary: false,
-					analytics: false,
-					preferences: false,
-					marketing: false,
-				});
-				hideBanner();
-			});
-		document.getElementById('cookie-consent-banner').style.display = 'block';
-	}
+    if (localStorage.getItem('consentMode') === null) {
+        document
+            .getElementById('btn-accept-all')
+            .addEventListener('click', function () {
+                setConsent({necessary: true, analytics: true, preferences: true, marketing: true});
+                hideBanner();
+            });
+        document
+            .getElementById('btn-accept-some')
+            .addEventListener('click', function () {
+                setConsent({
+                    necessary: true,
+                    analytics: document
+                        .getElementById('consent-analytics')
+                        .checked,
+                    preferences: document
+                        .getElementById('consent-preferences')
+                        .checked,
+                    marketing: document
+                        .getElementById('consent-marketing')
+                        .checked
+                });
+                hideBanner();
+            });
+        document
+            .getElementById('btn-reject-all')
+            .addEventListener('click', function () {
+                setConsent({necessary: false, analytics: false, preferences: false, marketing: false});
+                hideBanner();
+            });
+        document
+            .getElementById('cookie-consent-banner')
+            .style
+            .display = 'block';
+    }
 
-	function setConsent(consent) {
-		const consentMode = {
-			ad_storage: consent.marketing ? 'granted' : 'denied',
-			ad_user_data: consent.marketing ? 'granted' : 'denied',
-			ad_personalization: consent.marketing ? 'granted' : 'denied',
-			analytics_storage: consent.analytics ? 'granted' : 'denied',
-			personalization: consent.preferences ? 'granted' : 'denied',
-			personalization_storage: consent.preferences ? 'granted' : 'denied',
-			functionality_storage: consent.necessary ? 'granted' : 'denied',
-			security_storage: consent.necessary ? 'granted' : 'denied',
-		};
-		gtag('consent', 'update', consentMode);
-		localStorage.setItem('consentMode', JSON.stringify(consentMode));
-	}
+    function setConsent(consent) {
+        const consentMode = {
+            ad_storage: consent.marketing
+                ? 'granted'
+                : 'denied',
+            ad_user_data: consent.marketing
+                ? 'granted'
+                : 'denied',
+            ad_personalization: consent.marketing
+                ? 'granted'
+                : 'denied',
+            analytics_storage: consent.analytics
+                ? 'granted'
+                : 'denied',
+            personalization: consent.preferences
+                ? 'granted'
+                : 'denied',
+            personalization_storage: consent.preferences
+                ? 'granted'
+                : 'denied',
+            functionality_storage: consent.necessary
+                ? 'granted'
+                : 'denied',
+            security_storage: consent.necessary
+                ? 'granted'
+                : 'denied'
+        };
+        gtag('consent', 'update', consentMode);
+        localStorage.setItem('consentMode', JSON.stringify(consentMode));
+    }
 </script>
